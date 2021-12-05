@@ -8,7 +8,6 @@ fun main(args: Array<String>) {
     println(list)
 
     dec5_part1(list)
-
 }
 
 private fun dec5_processInput(input:List<String>): List<Pair<Int, Int>> {
@@ -103,20 +102,4 @@ fun dec5_makeDiagonalLine(x1: Int, x2: Int, y1: Int, y2: Int) : List<Pair<Int, I
     println("x1=$x1 x2=$x2 y1=$y1 y2=$y2")
     println(line)
     return line
-}
-
-private fun test_dec5_makeDiagonalLine() {
-    //1,1 -> 3,3
-    val line1 = dec5_makeDiagonalLine(x1 = 1, x2 = 3, y1 = 1, y2 = 3)
-    val expected1 = arrayListOf<Pair<Int, Int>>(1 to 1, 2 to 2, 3 to 3)
-    println(line1.containsAll(expected1))
-    println(expected1.containsAll(line1))
-
-
-    //9,7 -> 7,9 covers points 9,7, 8,8, and 7,9.
-    val line2 = dec5_makeDiagonalLine(x1 = 9, y1 = 7, x2=7, y2=9)
-    val expected2 = arrayListOf(9 to 7, 8 to 8, 7 to 9)
-    println(line2)
-    println(line2.containsAll(expected2))
-    println(expected2.containsAll(line2))
 }
